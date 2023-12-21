@@ -1,4 +1,41 @@
 # Hospital Management System
+sturture of project:
+# Package com.example.hospital_management_system
+# Class HelloApplication:
+The entry point for the JavaFX application.
+Responsible for creating and displaying the main application window.
+Loads the initial FXML (register-view.fxml).
+# Class AddPatientController:
+Controller for adding a new patient.
+Displays the patient addition form and handles user actions.
+# Class Patient:
+Entity class representing a patient.
+Used to store information about a patient.
+# Class PatientAccountController:
+Controller for patient accounting.
+Displays information about patients and handles user actions.
+# Class RegisterController:
+Controller for registering new users.
+Handles user registration actions.
+# Class LoginController:
+Controller for user login.
+Handles user login actions.
+Package com.example.hospital_management_system.database
+# Class DbFunctions:
+Contains methods for interacting with the database (e.g., connecting to the database, executing SQL queries, creating tables).
+Implements functions for working with users and patients.
+Package com.example.hospital_management_system.entities
+# Class User:
+Entity class representing a system user.
+Used to store information about users.
+Resources
+# FXML Files:
+register-view.fxml: Registration form.
+patient-accounting-view.fxml: Patient accounting form.
+login-view.fxml: Login form.
+add-patient-view.fxml: Patient addition form.
+# Other Resources:
+Images, styles, and other resources used in the application.
 
 ## Overview
 
