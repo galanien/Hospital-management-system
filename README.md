@@ -4,16 +4,6 @@
 
 This project is a Hospital Management System designed to manage patient records, appointments, and related information. It utilizes Java for the backend logic, JavaFX for the user interface, and PostgreSQL as the database.
 
-## Table of Contents
-
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Database Setup](#database-setup)
-- [Dependencies](#dependencies)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Features
 
 - Patient Management: Add, update, and view patient records.
