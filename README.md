@@ -1,4 +1,5 @@
 # Hospital Management System
+![IMAGE 2023-12-21 14:45:35](https://github.com/galanien/Hospital-management-system/assets/145608184/9dcf74a7-2668-4186-8f2e-6254a5b498ec)
 
 ## Overview
 
