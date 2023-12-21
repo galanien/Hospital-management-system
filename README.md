@@ -22,7 +22,7 @@ This project is a Hospital Management System designed to manage patient records,
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/hospital-management.git`
+1. Clone the repository: `https://github.com/galanien/Hospital-management-system.git`
 2. Open the project in your preferred Java IDE.
 
 ## Usage
