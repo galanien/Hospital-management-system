@@ -1,6 +1,6 @@
 # Hospital Management System
 sturture of project:
-# Package (com.example.hospital_management_system)
+# [Package] (com.example.hospital_management_system)
 # Class HelloApplication:
 The entry point for the JavaFX application.
 Responsible for creating and displaying the main application window.
