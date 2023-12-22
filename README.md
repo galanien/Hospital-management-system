@@ -1,72 +1,33 @@
 # Hospital Management System
-sturture of project:
-# [Package] (com.example.hospital_management_system)
-# Class HelloApplication:
-The entry point for the JavaFX application.
-Responsible for creating and displaying the main application window.
-Loads the initial FXML (register-view.fxml).
-# Class AddPatientController:
-Controller for adding a new patient.
-Displays the patient addition form and handles user actions.
-# Class Patient:
-Entity class representing a patient.
-Used to store information about a patient.
-# Class PatientAccountController:
-Controller for patient accounting.
-Displays information about patients and handles user actions.
-# Class RegisterController:
-Controller for registering new users.
-Handles user registration actions.
-# Class LoginController:
-Controller for user login.
-Handles user login actions.
-Package com.example.hospital_management_system.database
-# Class DbFunctions:
-Contains methods for interacting with the database (e.g., connecting to the database, executing SQL queries, creating tables).
-Implements functions for working with users and patients.
-Package com.example.hospital_management_system.entities
-# Class User:
-Entity class representing a system user.
-Used to store information about users.
-Resources
-# FXML Files:
-register-view.fxml: Registration form.
-patient-accounting-view.fxml: Patient accounting form.
-login-view.fxml: Login form.
-add-patient-view.fxml: Patient addition form.
-# Other Resources:
-Images, styles, and other resources used in the application.
+# description:
+~authentication: we can register and log in/out to site.
+~record patients information such as: name, illnes,address, patients number, cost etc.
+~patients tables:we can view patients info, update and delete it
+# project requirement list: 
+~Registration and login for administrators, doctors, staff, and patients.
+~Role-based access control with varying levels of permissions.
+Patient Management:
+~Patient registration with personal details, medical history, and contact information.
+~Appointment scheduling and management.
+~Admission and discharge processes.
+# team members:
+1. Uulkelsin Myrzakanova
+2. Diana Mamytova
+3. Nuraiym Zharmamtova
+# roles of group members:
+1. Uulkelsin - presentation and read me file
+2. Diana-Nuraiym front end and database
+# Screenshots:
+![IMAGE 2023-12-22 12:39:59](https://github.com/galanien/Hospital-management-system/assets/145608184/a7849e1c-5b92-423e-bc23-a7d53d70170f)
+![IMAGE 2023-12-22 12:40:14](https://github.com/galanien/Hospital-management-system/assets/145608184/33100b71-c0c5-45a2-9b73-49c27f18dfaf)
+![IMAGE 2023-12-22 12:40:26](https://github.com/galanien/Hospital-management-system/assets/145608184/64c403db-42d4-47fc-9895-4cbca0ab5588)
+![IMAGE 2023-12-22 12:40:42](https://github.com/galanien/Hospital-management-system/assets/145608184/329d3c29-0b36-45fe-973d-3c465ad70e1b)
+![IMAGE 2023-12-22 12:40:51](https://github.com/galanien/Hospital-management-system/assets/145608184/2b96e09e-ade8-4c13-93b1-17446b470c1f)
+# How to use code tutorial:
+https://drive.google.com/file/d/1jPlykTTp3CW04wMuTgKvz_Z0vFqM2NC6/view?usp=share_link
 
-## Overview
 
-This project is a Hospital Management System designed to manage patient records, appointments, and related information. It utilizes Java for the backend logic, JavaFX for the user interface, and PostgreSQL as the database.
 
-## Features
 
-- Patient Management: Add, update, and view patient records.
-- User Interface: JavaFX-based graphical user interface for easy navigation.
-- Database Integration: Utilizes PostgreSQL for data storage.
-
-## Installation
-
-1. Clone the repository: `https://github.com/galanien/Hospital-management-system.git`
-2. Open the project in your preferred Java IDE.
-
-## Usage
-
-1. Build and run the project.
-2. Use the graphical interface to interact with patient records.
-
-## Database Setup
-
-1. Install PostgreSQL on your local machine.
-2. Create a database named `hospital_management_system`.
-3. Update the database connection details in the code.
-
-## Dependencies
-
-- Java 8 or later
-- JavaFX
-- PostgreSQL JDBC Driver
 
 
