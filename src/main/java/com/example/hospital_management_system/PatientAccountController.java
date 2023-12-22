@@ -142,6 +142,8 @@ public class PatientAccountController {
         loadPatients(conn);
     }
     public void deletePatient(Connection conn, Patient patient) {
+        dbFunctions.insert_into_history(conn, patient_name.getText(), RegisterController.userDoctorEmail, "delete");
+
         dbFunctions.delete_row_by_id(conn,"patient", Math.toIntExact(patient.getId()));
         loadPageAfterDelete("patient-accounting-view.fxml");
     }

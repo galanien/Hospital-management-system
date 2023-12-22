@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="hospital_management_system">
+    <output-path>$PROJECT_DIR$/out/artifacts/hospital_management_system</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="com.example.hospital_management_system.HelloApplication" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="nativeBundle" value="all" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="hospital_management_system.jar">
+        <element id="module-output" name="hospital_management_system" />
+      </element>
+    </root>
+  </artifact>
+</component>

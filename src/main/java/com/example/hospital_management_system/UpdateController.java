@@ -123,6 +123,7 @@ public class UpdateController {
         patient.setDoctor_name(doctors_name.getText());
         patient.setTime(LocalDateTime.now().toString());
         dbFunctions.updatePatient(conn, patient);
+        dbFunctions.insert_into_history(conn, patient_name.getText(), RegisterController.userDoctorEmail, "update");
 
         //the text should be empty after button clicked after 2 second
     }

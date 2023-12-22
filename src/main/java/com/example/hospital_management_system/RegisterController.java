@@ -21,6 +21,10 @@ public class RegisterController {
     private DbFunctions dbFunctions;
     private Connection conn;
     private int userId;
+    static public String userDoctorEmail;
+
+
+
     public void setUserId(int userId){
         this.userId = userId;
     }
@@ -62,6 +66,7 @@ public class RegisterController {
             user.setEmail(email.getText());
             user.setPassword(password.getText());
             dbFunctions.insert_into_user(conn,user);
+            userDoctorEmail = email.getText();
             loadPage("patient-accounting-view.fxml", true);
         }
         else {
@@ -75,6 +80,8 @@ public class RegisterController {
         System.out.println("ok1");
         conn=dbFunctions.connect_to_db();
         System.out.println("ok12");
+        dbFunctions.createTableHistory(conn);
+
 
         dbFunctions.createTableUser(conn);
         System.out.println("ok123");

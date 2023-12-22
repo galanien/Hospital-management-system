@@ -151,6 +151,29 @@ public class DbFunctions {
             System.out.println(e);
         }
     }
+    public void insert_into_patient_doctor(Connection conn, String patient_name, String doctor_name) {
+        Statement statement;
+        try {
+            String query = String.format("INSERT INTO \"patient_doctor\" (\"patient_name\", \"doctor_name\") VALUES ('%s', '%s');", patient_name, doctor_name);
+            statement = conn.createStatement();
+            statement.executeUpdate(query);
+            System.out.println("Row Inserted");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+    public void insert_into_history(Connection conn, String patient_name, String doctor_name, String action) {
+        Statement statement;
+        try {
+            String query = String.format("INSERT INTO \"history\" (\"patient_name\", \"doctor_name\", \"action\", \"time\") VALUES ('%s', '%s', '%s', '%s');",
+                    patient_name, doctor_name, action, LocalDateTime.now().toString());
+            statement = conn.createStatement();
+            statement.executeUpdate(query);
+            System.out.println("Row Inserted");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
     public void updatePatient(Connection conn, Patient patient) {
         String query = "UPDATE patient SET name=?, phone=?, address=?, doctor_name=?, diseases=?, count=?, time=? WHERE id=?";
 
@@ -261,6 +284,58 @@ public class DbFunctions {
         }
 
         return patients;
+    }
+
+    public void createTablePatient_Doctor(Connection conn) {
+        Statement statement;
+        try {
+            DatabaseMetaData metaData = conn.getMetaData();
+            ResultSet resultSet = metaData.getTables(null, null, "patient_doctor", null);
+
+            if (!resultSet.next()) {
+                String query = "CREATE TABLE \"patient_doctor\" ("
+                        + "id SERIAL PRIMARY KEY, "
+                        + "patient_name VARCHAR(255),   "
+                        + "doctor_name VARCHAR(255)"
+                        + ")";
+                statement = conn.createStatement();
+                statement.executeUpdate(query);
+                System.out.println("Table Created");
+            } else {
+                System.out.println("Table already exists");
+            }
+
+            resultSet.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void createTableHistory(Connection conn) {
+        Statement statement;
+        try {
+            DatabaseMetaData metaData = conn.getMetaData();
+            ResultSet resultSet = metaData.getTables(null, null, "history", null);
+
+            if (!resultSet.next()) {
+                String query = "CREATE TABLE \"history\" ("
+                        + "id SERIAL PRIMARY KEY, "
+                        + "patient_name VARCHAR(255),"
+                        + "action VARCHAR(255),"
+                        + "time VARCHAR(255),"
+                        + "doctor_name VARCHAR(255)"
+                        + ")";
+                statement = conn.createStatement();
+                statement.executeUpdate(query);
+                System.out.println("Table Created");
+            } else {
+                System.out.println("Table already exists");
+            }
+
+            resultSet.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
 }

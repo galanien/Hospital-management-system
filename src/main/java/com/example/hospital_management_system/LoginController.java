@@ -53,6 +53,7 @@ public class LoginController {
     @FXML
     void onSignIn(ActionEvent event) {
         if (dbFunctions.isUserExistAndPassword(conn, email.getText(), password.getText())){
+            RegisterController.userDoctorEmail= (email.getText());
             loadPage("patient-accounting-view.fxml", true);
         }
         else {
@@ -71,6 +72,7 @@ public class LoginController {
         System.out.println("ok1");
         conn=dbFunctions.connect_to_db();
         System.out.println("ok12");
+        dbFunctions.createTableHistory(conn);
 
         dbFunctions.createTableUser(conn);
         System.out.println("ok123");

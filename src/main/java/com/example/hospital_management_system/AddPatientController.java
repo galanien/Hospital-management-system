@@ -95,6 +95,7 @@ public class AddPatientController {
         patient.setDoctor_name(doctors_name.getText());
         patient.setTime(LocalDateTime.now().toString());
         dbFunctions.insert_into_patient(conn, patient);
+        dbFunctions.insert_into_patient_doctor(conn, patient_name.getText(), RegisterController.userDoctorEmail);
 
         //the text should be empty after button clicked after 2 second
     }
@@ -104,6 +105,7 @@ public class AddPatientController {
         dbFunctions = new DbFunctions();
         conn = dbFunctions.connect_to_db();
         dbFunctions.createTablePatient(conn);
+        dbFunctions.createTablePatient_Doctor(conn);
 
         // Set up a Timeline with a KeyFrame
         Timeline timeline = new Timeline(
@@ -127,6 +129,8 @@ public class AddPatientController {
             patient.setDoctor_name(doctors_name.getText());
             patient.setTime(LocalDateTime.now().toString());
             dbFunctions.insert_into_patient(conn, patient);
+            dbFunctions.insert_into_patient_doctor(conn, patient_name.getText(), RegisterController.userDoctorEmail);
+            dbFunctions.insert_into_history(conn, patient_name.getText(), RegisterController.userDoctorEmail, "add");
             timelyText.setText("added successfully!");
             // Start the timeline when the button is clicked
 
